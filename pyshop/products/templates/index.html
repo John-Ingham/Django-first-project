@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Products</h1>
+<ul>
+  {% for product in products %}
+  <!-- dynamic rendering from data -->
+  <li>{{product.name}} (£{{product.price}})</li>
+  <!-- syntax to render dynamically-->
+  {% endfor %}
+</ul>
+{% endblock %}
+
+<!-- NB cannot leave space between % and {}, if you do will not recognise the block -->

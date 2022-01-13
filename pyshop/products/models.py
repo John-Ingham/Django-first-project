@@ -14,3 +14,9 @@ class Offer(models.Model):
     description = models.CharField(max_length = 200) ## 200 char limit to describe discount - e.g. "20% off all products in this range"
     discount = models.FloatField()                   ## float used for a decimal discount to apply
 
+
+class Simple_product(models.Model):
+    name = models.CharField(max_length = 100)
+    price = models.FloatField()
+    stock= models.IntegerField()
+## no image
