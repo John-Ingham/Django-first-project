@@ -1,12 +1,24 @@
 {% extends 'base.html' %} {% block content %}
 <h1>Products</h1>
-<ul>
+<div class="row">
   {% for product in products %}
   <!-- dynamic rendering from data -->
-  <li>{{product.name}} (£{{product.price}})</li>
-  <!-- syntax to render dynamically-->
+  <div class="col">
+    <div class="card" style="width: 18rem;">
+      <img src="{{product.image_url}}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text">
+          £{{product.price}}
+        </p>
+        <a href="#" class="btn btn-primary">Add to Cart</a>
+      </div>
+    </div>
+  </div>
   {% endfor %}
-</ul>
+  <!-- end for loop-->
+</div>
+
 {% endblock %}
 
 <!-- NB cannot leave space between % and {}, if you do will not recognise the block -->

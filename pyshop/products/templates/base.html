@@ -15,9 +15,18 @@
 
     <title>Django Shop</title>
   </head>
+
   <body>
-    {% block content %} {% endblock %}
-    <!--Define a `block` and will insert into page-->
+    <!-- As a heading -->
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Navbar - Django Shop</span>
+      </div>
+    </nav>
+    <div class="container">
+      {% block content %} {% endblock %}
+      <!--Define a `block` and `name` will insert into page-->
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
